@@ -14,7 +14,7 @@ public enum AIstates
 }
 
 
-public class ObstacleAvoidance : MonoBehaviour {
+public class simpleStateMachine : MonoBehaviour {
 
 
     

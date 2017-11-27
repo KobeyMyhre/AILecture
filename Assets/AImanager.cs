@@ -5,6 +5,7 @@ using UnityEngine;
 public class AImanager : MonoBehaviour {
 
     WanderBehavior wander;
+    InterposeBehavior interpose;
     Rigidbody rb;
     public float avoidanceStrength;
     public float avoidanceRange;
@@ -12,6 +13,7 @@ public class AImanager : MonoBehaviour {
 	void Start ()
     {
         wander = GetComponent<WanderBehavior>();
+        interpose = GetComponent<InterposeBehavior>();
         rb = GetComponent<Rigidbody>();
 	}
 
@@ -29,7 +31,7 @@ public class AImanager : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        wander.DoAction();
-        doWallAvoidance();
+        interpose.DoAction();
+        //doWallAvoidance();
 	}
 }
